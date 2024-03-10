@@ -10,6 +10,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Install dependencies
+        run: |
+          pip install robotframework-seleniumlibrary
+
       - name: Run Robot Framework tests
         run: |
           robot --outputdir results/ tests/
