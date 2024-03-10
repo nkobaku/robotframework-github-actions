@@ -17,3 +17,9 @@ jobs:
       - name: Run Robot Framework tests
         run: |
           robot --outputdir results/ tests/
+
+      - name: Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-framework-report
+          path: output/results/**
